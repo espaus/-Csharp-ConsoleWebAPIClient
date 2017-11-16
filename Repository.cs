@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Runtime.Serialization;
 
 namespace WebAPIClient
@@ -20,5 +21,17 @@ namespace WebAPIClient
 
         [DataMember(Name="watchers")]
         public int Watchers { get; set; }
+
+        [DataMember(Name="pushed_at")]
+        private string JsonDate { get; set; }
+
+        [IgnoreDataMember]
+        public DateTime LastPush
+        {
+            get
+            {
+                return DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+            }
+        }
     }
 }
