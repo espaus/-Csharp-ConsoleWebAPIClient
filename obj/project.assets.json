@@ -3303,9 +3303,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "D:\\C#-projects\\RestClient\\RestClient.csproj",
       "projectName": "RestClient",
@@ -3341,14 +3338,14 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "System.Runtime.Serialization.Json": {
-            "target": "Package",
-            "version": "4.3.0"
-          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
+          },
+          "System.Runtime.Serialization.Json": {
+            "target": "Package",
+            "version": "4.3.0"
           }
         },
         "imports": [
